@@ -33,11 +33,13 @@ def lotto():
         print("You lose! You only guessed",num_of_right,"number(s) correctly. The lottery numbers are",lottery_nums)
 
 def try_again():
-    try_again = input("Try again? y/n: ")
-    while try_again == "y" or try_again == "yes":
+    try_again_func = input("Try again? y/n: ")
+    while try_again_func == "y" or try_again_func == "yes":
         display_program()
         lotto()
-    while try_again == "n" or try_again == "no":
+        try_again()
+        break
+    while try_again_func == "n" or try_again_func == "no":
         print("OK. Goodbye!")
         break
 
